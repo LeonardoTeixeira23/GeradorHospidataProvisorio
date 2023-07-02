@@ -18,7 +18,8 @@ function exibirDados(event) {
         <strong>*Resultado Esperado:*</strong> ${resultadoesperado}<br>
         <strong>*Considerações:*</strong> ${consideracoes}<br>
         <strong>*Versão:*</strong> ${versao}<br>
-        <strong>*Banco:*</strong> ${banco}
+        <strong>*Banco:*</strong> ${banco}<br>
+        <strong>*Anexos:*</strong>
       `;
 
     document.getElementById("dadosExibicao").innerHTML = dadosExibicao;
