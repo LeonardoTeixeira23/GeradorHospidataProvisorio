@@ -11,34 +11,74 @@
 </head>
 <body>
 <form>
-    <label for="localizacao">LOCALIZAÇÃO:</label><br>
-    <input type="text" id="localizacao" name="localizacao"><br><br>
+    <ul class="navbar">
+        <li><a class="tab-link" href="#subtarefa">Subtarefa</a></li>
+        <li><a class="tab-link" href="#problema">Problema</a></li>
+        <li><a class="tab-link" href="#implementacao">Implementação</a></li>
+    </ul>
 
-    <label for="precondicao">PRÉ-CONDIÇÃO:</label><br>
-    <textarea id="precondicao" name="precondicao"></textarea><br><br>
+    <div class="content">
+        <div id="subtarefa" class="tab-content active">
+            <!-- Conteúdo da aba "Subtarefa" -->
+            <h2>Subtarefa</h2>
+            <label for="localizacao">LOCALIZAÇÃO:</label>
+            <input type="text" id="localizacao" name="localizacao">
 
-    <label for="passos">PASSOS:</label><br>
-    <textarea id="passos" name="passos"></textarea><br><br>
+            <label for="precondicao">PRÉ-CONDIÇÃO:</label>
+            <textarea id="precondicao" name="precondicao"></textarea>
 
-    <label for="resultado">RESULTADO:</label><br>
-    <input type="text" id="resultado" name="resultado"><br><br>
+            <label for="passos">PASSOS:</label>
+            <textarea id="passos" name="passos"></textarea>
 
-    <label for="resultadoesperado">RESULTADO ESPERADO:</label><br>
-    <input type="text" id="resultadoesperado" name="resultadoesperado"><br><br>
+            <label for="resultado">RESULTADO:</label>
+            <input type="text" id="resultado" name="resultado">
 
-    <label for="consideracoes">CONSIDERAÇÕES:</label><br>
-    <textarea id="consideracoes" name="consideracoes"></textarea><br><br>
+            <label for="resultadoesperado">RESULTADO ESPERADO:</label>
+            <input type="text" id="resultadoesperado" name="resultadoesperado">
 
-    <label for="versao">VERSÃO:</label><br>
-    <input type="text" id="versao" name="versao"><br><br>
+            <label for="consideracoes">CONSIDERAÇÕES:</label>
+            <textarea id="consideracoes" name="consideracoes"></textarea>
 
-    <label for="banco">BANCO:</label><br>
-    <input type="text" id="banco" name="banco"><br><br>
+            <label for="versao">VERSÃO:</label>
+            <input type="text" id="versao" name="versao">
 
-<!--    <label for="anexos">ANEXOS:</label><br>-->
-<!--    <input type="file" id="anexos" name="anexos" multiple><br><br>-->
+            <label for="banco">BANCO:</label>
+            <input type="text" id="banco" name="banco">
 
-    <button onclick="exibirDados(event)">Exibir Dados</button>
+            <!--    <label for="anexos">ANEXOS:</label><br>-->
+            <!--    <input type="file" id="anexos" name="anexos" multiple><br><br>-->
+
+            <button onclick="exibirDadosSubtarefa(event)">Exibir Dados</button>
+        </div>
+        <div id="problema" class="tab-content">
+            <!-- Conteúdo da aba "Problema" -->
+            <h2>Problema</h2>
+            <form>
+                <label for="sucesso">Sucesso:</label>
+                <input type="checkbox" id="sucesso" name="sucesso"><br>
+
+                <label for="observacao">Observação:</label>
+                <textarea id="observacao" name="observacao"></textarea>
+
+                <label for="versao">Versão:</label>
+                <input type="text" id="versao" name="versao">
+
+                <label for="banco">Banco:</label>
+                <input type="text" id="banco" name="banco">
+
+                <label for="link">Link:</label>
+                <input type="text" id="link" name="link">
+
+                <button onclick="exibirDadosImplementacao(event)">Exibir Dados</button>
+            </form>
+        </div>
+        <div id="implementacao" class="tab-content">
+            <!-- Conteúdo da aba "Implementação" -->
+            <h2>Implementação</h2>
+            <p>Conteúdo da implementação...</p>
+        </div>
+    </div>
+
 
     <div id="dadosExibicao"></div>
 </form>

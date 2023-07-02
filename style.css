@@ -1,4 +1,45 @@
 /* style.css */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f2f2f2;
+}
+
+ul.navbar li {
+    float: left;
+}
+
+ul.navbar li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #ddd;
+}
+
+ul.navbar li.active a {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Estilos do conteúdo */
+.content {
+    margin-top: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -27,6 +68,7 @@ input[type="file"] {
     margin-bottom: 10px;
 }
 
+
 button {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -37,7 +79,8 @@ button {
 }
 
 #dadosExibicao {
-    margin-top: 20px;
+    max-width: 650px;
+    margin: 20px auto;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
